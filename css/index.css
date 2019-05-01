@@ -133,5 +133,98 @@ table {
 html,
 body {
   height: 100%;
-  background-color: red;
+  background-color: #bbb;
+}
+header {
+  background-color: #333;
+  height: 6rem;
+  padding: 10px;
+}
+header h1 {
+  color: #bbb;
+  text-align: center;
+  font-size: 2rem;
+}
+header nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav a {
+  color: #bbb;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+}
+.content {
+  margin: 10px;
+}
+article {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+}
+article img {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  margin: 10px;
+}
+article h2 {
+  font-size: 1.5rem;
+}
+article h3 {
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #333;
+}
+article p {
+  margin: 10px 0;
+}
+article button {
+  width: 400px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #333;
+  color: #bbb;
+}
+.info-cards {
+  border: 1px black;
+  border-style: solid none dashed none;
+  margin-top: 25px;
+}
+.info-cards div {
+  margin: 10px 0;
+}
+.info-cards div h3 {
+  font-size: 1.2rem;
+  margin-bottom: 7px;
+}
+.info-cards div li {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.work-history {
+  margin: 10px 0;
+  padding: 10px;
+}
+.work-history h3 {
+  font-size: 1.2rem;
+  margin-bottom: 7px;
+}
+.work-history ul li {
+  padding: 2px 0;
+}
+.work-history ul li:nth-child(odd) {
+  background: #888;
+}
+footer {
+  background-color: #333;
+  padding: 10px;
+  color: #bbb;
+}
+footer p {
+  text-align: center;
+  padding: 20px;
 }

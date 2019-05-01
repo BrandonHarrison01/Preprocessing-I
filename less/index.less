@@ -53,8 +53,125 @@ table {
     box-sizing: border-box;
 }
 
+@darker-gray: #333;
+@lighter-gray: #bbb;
+
 html, body {
 	height: 100%;
-	background-color: red;
+	background-color: @lighter-gray;
 }
 
+header {
+	background-color: @darker-gray;
+	height: 6rem;
+	padding: 10px;
+
+	h1 {
+		color: @lighter-gray;
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	nav {
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+
+
+		a {
+			color: @lighter-gray;
+			text-decoration: none;
+			padding: 10px;
+			margin: 0 10px;
+		}
+	}
+}
+
+.content {
+	margin: 10px;
+}
+
+article {
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	justify-content: center;
+
+	img {
+		width: 350px;
+		height: 350px;
+		border-radius: 20px;
+		margin: 10px;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		padding-bottom: 10px;
+		border-bottom: 1px dashed @darker-gray;
+	}
+
+	p {
+		margin: 10px 0;
+	}
+
+	button {
+		width: 400px;
+		height: 40px;
+		border-radius: 15px;
+		background-color: @darker-gray;
+		color: @lighter-gray;
+	}
+}
+
+.info-cards {
+	border: 1px black;
+	border-style: solid none dashed none;
+	margin-top: 25px;
+
+	div{
+		margin: 10px 0;
+
+		h3{
+			font-size: 1.2rem;
+			margin-bottom: 7px;
+		}
+
+		li {
+			margin-left: 20px;
+			list-style-type: disc;
+		}
+	}
+}
+
+.work-history {
+	margin: 10px 0;
+	padding: 10px;
+
+	h3 {
+		font-size: 1.2rem;
+		margin-bottom: 7px;
+	}
+
+	ul li {
+		padding: 2px 0;
+	}
+
+	ul li:nth-child(odd){
+		background: #888;
+	}
+}
+
+footer {
+	background-color: @darker-gray;
+	padding: 10px;
+	color: @lighter-gray;
+
+	p {
+		text-align: center;
+		padding: 20px;
+	}
+}
