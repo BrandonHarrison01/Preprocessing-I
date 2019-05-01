@@ -134,6 +134,8 @@ html,
 body {
   height: 100%;
   background-color: #bbb;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 header {
   background-color: #333;
@@ -148,7 +150,7 @@ header h1 {
 header nav {
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 header nav a {
   color: #bbb;
@@ -161,7 +163,7 @@ header nav a {
 }
 article {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-flow: wrap;
   justify-content: center;
 }
@@ -171,13 +173,16 @@ article img {
   border-radius: 20px;
   margin: 10px;
 }
-article h2 {
+article div {
+  border-bottom: 1px dashed #333;
+}
+article div h2 {
   font-size: 1.5rem;
 }
-article h3 {
+article div h3 {
   font-size: 1.2rem;
   padding-bottom: 10px;
-  border-bottom: 1px dashed #333;
+  text-align: center;
 }
 article p {
   margin: 10px 0;
@@ -227,4 +232,19 @@ footer {
 footer p {
   text-align: center;
   padding: 20px;
+}
+@media (min-width: 730px) {
+  article {
+    justify-content: space-evenly;
+  }
+  article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+  }
+  article p {
+    border-top: 1px dashed;
+    padding-top: 10px;
+  }
 }
