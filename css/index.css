@@ -1,1 +1,323 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.bold-card {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+html,
+body {
+  height: 100%;
+  background-color: #bbb;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+header {
+  background-color: #333;
+  height: 6rem;
+  padding: 10px;
+}
+header h1 {
+  color: #bbb;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+}
+header nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav a {
+  color: #bbb;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+header nav a:hover {
+  background-color: #bbb;
+  color: #333;
+}
+.content {
+  margin: 10px;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: center;
+}
+article img {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  border: 1px solid;
+  margin: 10px;
+}
+article div {
+  border-bottom: 1px dashed #333;
+}
+article div h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+article div h3 {
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  text-align: center;
+}
+article p {
+  margin: 10px 0;
+}
+article button {
+  width: 400px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #333;
+  color: #bbb;
+}
+article button:hover {
+  background-color: #888;
+  color: #333;
+}
+.info-cards {
+  border: 1px black;
+  border-style: solid none dashed none;
+  margin-top: 25px;
+}
+.info-cards div {
+  margin: 10px 0;
+}
+.info-cards div h3 {
+  font-size: 1.2rem;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+.info-cards div li {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.work-history {
+  margin: 10px 0;
+  padding: 10px;
+}
+.work-history h3 {
+  font-size: 1.2rem;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+.work-history ul li {
+  padding: 2px 0;
+}
+.work-history ul li:nth-child(odd) {
+  background: #888;
+}
+footer {
+  background-color: #333;
+  padding: 10px;
+  color: #bbb;
+}
+footer p {
+  text-align: center;
+  padding: 20px;
+}
+@media (min-width: 720px) {
+  header {
+    height: 10rem;
+  }
+  header h1 {
+    margin-top: 30px;
+    font-size: 3rem;
+  }
+  header nav {
+    font-size: 1.3rem;
+    margin: 18px auto 0;
+    width: 70%;
+  }
+  header nav a {
+    padding: 20px 40px;
+  }
+  article {
+    justify-content: space-evenly;
+  }
+  article img {
+    margin: 50px;
+  }
+  article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+  }
+  article div h2 {
+    font-size: 2rem;
+  }
+  article div h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  article p {
+    border-top: 1px dashed;
+    padding: 30px 60px 10px;
+  }
+  .info-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  .info-cards div {
+    width: 40%;
+    margin: 50px;
+  }
+  .info-cards div h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .work-history {
+    padding: 50px 80px;
+  }
+  .work-history h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .work-history ul {
+    margin-top: 10px;
+  }
+  footer {
+    padding: 30px;
+  }
+  footer p {
+    margin-top: 70px;
+  }
+}
