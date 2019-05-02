@@ -56,6 +56,11 @@ table {
 @darker-gray: #333;
 @lighter-gray: #bbb;
 
+.bold-card {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
 html, body {
 	height: 100%;
 	background-color: @lighter-gray;
@@ -72,6 +77,8 @@ header {
 		color: @lighter-gray;
 		text-align: center;
 		font-size: 2rem;
+		font-weight: bold;
+		font-family: 'Merriweather', serif;
 	}
 
 	nav {
@@ -85,6 +92,12 @@ header {
 			text-decoration: none;
 			padding: 10px;
 			margin: 0 10px;
+			border-radius: 5px;
+		}
+
+		a:hover {
+			background-color: @lighter-gray;
+			color: @darker-gray;
 		}
 	}
 }
@@ -103,6 +116,7 @@ article {
 		width: 350px;
 		height: 350px;
 		border-radius: 20px;
+		border: 1px solid;
 		margin: 10px;
 	}
 
@@ -111,6 +125,8 @@ article {
 
 		h2 {
 			font-size: 1.5rem;
+			font-weight: bold;
+			color: @darker-gray;
 		}
 
 		h3 {
@@ -131,6 +147,11 @@ article {
 		background-color: @darker-gray;
 		color: @lighter-gray;
 	}
+
+	button:hover {
+		background-color: #888;
+		color: @darker-gray;
+	}
 }
 
 .info-cards {
@@ -144,6 +165,7 @@ article {
 		h3{
 			font-size: 1.2rem;
 			margin-bottom: 7px;
+			font-weight: bold;
 		}
 
 		li {
@@ -160,6 +182,7 @@ article {
 	h3 {
 		font-size: 1.2rem;
 		margin-bottom: 7px;
+		font-weight: bold;
 	}
 
 	ul li {
@@ -182,20 +205,86 @@ footer {
 	}
 }
 
-@media (min-width: 730px) {
+@media (min-width: 720px) {
+	
+	header{
+		height: 10rem;
+		
+		h1 {
+			margin-top: 30px;
+			font-size: 3rem;
+		}
+
+		nav {
+			font-size: 1.3rem;
+			margin: 18px auto 0;
+			width: 70%;
+
+			a {
+				padding: 20px 40px;
+			}
+		}
+	}
+
 	article {
 		justify-content: space-evenly;
+
+		img {
+			margin: 50px;
+		}
 		
 		div {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			border: none;
+
+			h2 {
+				font-size: 2rem;
+			}
+
+			h3 {
+				.bold-card();
+			}
 		}
 
 		p {
 			border-top: 1px dashed;
-			padding-top: 10px;
+			padding: 30px 60px 10px;
+		}
+	}
+
+	.info-cards {
+		display: flex;
+		justify-content: space-between;
+
+		div {
+			width: 40%;
+			margin: 50px;
+
+			h3 {
+				.bold-card();
+			}
+		}
+	}
+
+	.work-history {
+		padding: 50px 80px;
+
+		h3 {
+			.bold-card();
+		}
+
+		ul {
+			margin-top: 10px;
+		}
+	}
+
+	footer {
+		padding: 30px;
+
+		p {
+			margin-top: 70px;
 		}
 	}
 }
